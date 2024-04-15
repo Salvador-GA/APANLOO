@@ -13,7 +13,7 @@ import java.util.Queue;
  * @param <T>  el tipo del dato que contendrá cada Nodo.
  * @param raiz el nodo raiz del arbol.
  * @author Salvador Gonzalez Arellano
- * @version 1.0
+ * @version 1.1
  */
 public class ArbolBinario<T> {
     private Nodo<T> raiz; // Raíz del árbol binario.
@@ -238,16 +238,16 @@ public class ArbolBinario<T> {
                     return false;
                 } else {
                     Nodo<T> nuevo = new Nodo<T>(dato);
-                    /* Se intena insertar en el lado izquiero */
                     if (antecesorNodo.getIzquierdo() == null) {
+                        /* Se intena insertar en el lado izquiero */
                         antecesorNodo.setIzquierdo(nuevo);
                         return true;
-                        /* Se intenta insertar en el lado derecho */
                     } else if (antecesorNodo.getDerecho() == null) {
+                        /* Se intenta insertar en el lado derecho */
                         antecesorNodo.setDerecho(nuevo);
                         return true;
-                        /* El antecesor tiene ambos enlaces ocupados */
                     } else {
+                        /* El antecesor tiene ambos enlaces ocupados */
                         return false;
                     }
                 }
