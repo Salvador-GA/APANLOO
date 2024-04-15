@@ -1,0 +1,1 @@
+Clase ArbolBinarioBusqueda, almacena los nodos de un arbol binario, de tal forma que para cualquier nodo del arbol se cumple que todos los nodos del subarbol izquierdo son menores y todos los nodos del subarbol derecho son mayores, por simplicidad no se admiten nodos repetidos
