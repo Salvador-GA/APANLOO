@@ -204,11 +204,7 @@ public class ArbolBinario<T> {
      */
     public int altura(T dato) {
         Nodo<T> actual = encontrarNodo(dato);
-        if (actual != null) {
-            return altura(actual);
-        } else {
-            return 0;
-        }
+        return altura(actual);
     }
 
     /**
