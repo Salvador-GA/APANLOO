@@ -239,11 +239,11 @@ public class ArbolBinario<T> {
                 } else {
                     Nodo<T> nuevo = new Nodo<T>(dato);
                     if (antecesorNodo.getIzquierdo() == null) {
-                        /* Se intena insertar en el lado izquiero */
+                        /* Se insertar en el lado izquiero */
                         antecesorNodo.setIzquierdo(nuevo);
                         return true;
                     } else if (antecesorNodo.getDerecho() == null) {
-                        /* Se intenta insertar en el lado derecho */
+                        /* Se insertar en el lado derecho */
                         antecesorNodo.setDerecho(nuevo);
                         return true;
                     } else {
