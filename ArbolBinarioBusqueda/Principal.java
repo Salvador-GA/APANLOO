@@ -1,5 +1,10 @@
 package ArbolBinarioBusqueda;
 
+/**
+ * Clase principal para probar los metodos de la clase ArbolBinarioBusqueda.
+ * @author Salvador Gonzalez Arellano
+ * @version 1.0
+ */
 public class Principal {
     public static void main(String[] args) {
         ArbolBinarioBusqueda<Integer> arbol = new ArbolBinarioBusqueda<Integer>();
