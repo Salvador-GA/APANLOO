@@ -34,6 +34,9 @@ public class TablaHashInt {
 
     /**
      * Metodo para encontrar el primo mas grande menor que la capacidad deseada
+     * 
+     * @param capacidad capacidad deseada para la tabla, aunque en realidad la
+     *                  capacidad sera igual al primo mas grande menor que capacidad
      */
     private void encontrarPrimo(int capacidad) {
         for (int i = capacidad; i > 0; i--) {
