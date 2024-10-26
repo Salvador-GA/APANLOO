@@ -1,0 +1,1 @@
+En este ejemplo encontrará la forma de declarar una clase genérica que puede almacenar y manipular objetos con 2 tipo genéricos.

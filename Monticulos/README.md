@@ -1,1 +1,0 @@
-Clase Monticulo, almacena los nodos en un "arbol binario", de tal forma que para cualquier nodo del arbol se cumple que todos los nodos sucesores son menores y además es un arbol completo.

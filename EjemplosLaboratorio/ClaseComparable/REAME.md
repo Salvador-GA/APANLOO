@@ -1,1 +1,0 @@
-Clase que implementa la interfaz comparable para poder implementar el método compareTo

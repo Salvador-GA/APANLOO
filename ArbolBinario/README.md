@@ -1,1 +1,0 @@
-Clase ArbolBinario que almacena los nodos en un arbol binario, de tal forma que cuando se va a agregar un nodo se necesita indicar cual será el nodo antecesor/padre y luego se intenta agregar primero en el enlace izquierdo, si ya esta ocupado entonces lo intenta agregar en el derecho, si tambiéne esta ocupado indica el error/false.
