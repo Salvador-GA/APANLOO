@@ -1,5 +1,8 @@
 /**
  * Clase principal que ejecuta el sistema de eventos y busca números primos.
+ *
+ * @author Salvador Gonzalez Arellano
+ * @version 1.0
  */
 public class Principal {
 
