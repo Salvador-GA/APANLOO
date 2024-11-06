@@ -2,6 +2,9 @@ package EventosMultiples;
 
 /**
  * Interfaz que representa un listener para eventos.
+ *
+ * @author Salvador Gonzalez Arellano
+ * @version 1.0
  */
 public interface EventListener {
     /**
