@@ -1,5 +1,8 @@
 /**
  * Clase principal que ejecuta el sistema de eventos.
+ *
+ * @author Salvador Gonzalez Arellano
+ * @version 1.0
  */
 public class Principal {
     /**
