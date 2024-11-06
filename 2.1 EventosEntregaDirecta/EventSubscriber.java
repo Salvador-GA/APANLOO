@@ -1,5 +1,8 @@
 /**
  * La clase EventSubscriber implementa el listener que reacciona a eventos.
+ *
+ * @author Salvador Gonzalez Arellano
+ * @version 1.0
  */
 public class EventSubscriber implements EventListener{
     private final String name;
