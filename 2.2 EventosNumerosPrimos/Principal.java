@@ -32,9 +32,9 @@ public class Principal {
         publisher.registerListener(new EventSubscriber("Suscriptor 1"));
         publisher.registerListener(new EventSubscriber("Suscriptor 2"));
 
-        // Buscar números primos entre 1 y 10000 y notificar cada vez que se encuentre
+        // Buscar números primos entre 2 y 10000 y notificar cada vez que se encuentre
         // uno
-        for (int i = 1; i <= 10000; i++) {
+        for (int i = 2; i <= 10000; i++) {
             if (esPrimo(i)) {
                 publisher.notifyListeners("Número primo encontrado: " + i);
             }
