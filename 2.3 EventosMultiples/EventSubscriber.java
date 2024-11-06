@@ -2,6 +2,9 @@ package EventosMultiples;
 
 /**
  * Clase EventSubscriber que implementa el listener y define acciones basadas en el tipo de evento.
+ *
+ * @author Salvador Gonzalez Arellano
+ * @version 1.0
  */
 public class EventSubscriber implements EventListener {
     private final String name;
