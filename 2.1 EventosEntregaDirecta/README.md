@@ -1,0 +1,1 @@
+Ejemplo de un sistema de eventos y notificaciones sencillo

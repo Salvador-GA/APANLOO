@@ -1,5 +1,3 @@
-package EventosEntregaDirecta;
-
 /**
  * La clase EventSubscriber implementa el listener que reacciona a eventos.
  */

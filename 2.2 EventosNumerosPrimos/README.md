@@ -1,0 +1,1 @@
+Ejemplo que aplica el sistema de eventos a la detección de un número primo

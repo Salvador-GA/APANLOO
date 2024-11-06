@@ -1,5 +1,3 @@
-package EventosEntregaDirecta;
-
 /**
  * Clase principal que ejecuta el sistema de eventos.
  */

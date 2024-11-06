@@ -1,5 +1,3 @@
-package EventosNumerosPrimos;
-
 /**
  * Clase principal que ejecuta el sistema de eventos y busca números primos.
  */

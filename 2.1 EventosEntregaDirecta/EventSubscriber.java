@@ -1,5 +1,3 @@
-package EventosNumerosPrimos;
-
 /**
  * La clase EventSubscriber implementa el listener que reacciona a eventos.
  */

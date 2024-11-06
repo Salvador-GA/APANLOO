@@ -1,5 +1,3 @@
-package EventosEntregaDirecta;
-
 /**
  * Interfaz que representa un listener para eventos.
  */

@@ -1,5 +1,3 @@
-package EventosNumerosPrimos;
-
 /**
  * Interfaz que representa un listener para eventos.
  */
