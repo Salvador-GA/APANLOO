@@ -5,6 +5,9 @@ import java.util.List;
 
 /**
  * La clase EventPublisher gestiona los eventos y notifica a los listeners registrados.
+ *
+ * @author Salvador Gonzalez Arellano
+ * @version 1.0
  */
 public class EventPublisher {
     private final List<EventListener> listeners = new ArrayList<>();
