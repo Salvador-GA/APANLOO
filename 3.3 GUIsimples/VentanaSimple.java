@@ -1,3 +1,5 @@
+package SimpleGUI;
+
 import java.awt.Dimension;
 import java.awt.Frame;
 import java.awt.Toolkit;
@@ -19,7 +21,7 @@ public class VentanaSimple extends Frame {
         super("Una ventana simple"); // Crea la ventana con un titulo
         setSize(300, 200);
         // Se agrega el listener para el evento que ocurre al cerrar la ventana se
-        // termine la aplicacion
+        // termine la aplicacion mediante una clase anonima
         addWindowListener(new WindowAdapter() {
             public void windowClosing(WindowEvent evento) {
                 System.exit(0);

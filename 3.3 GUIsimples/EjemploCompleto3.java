@@ -1,3 +1,5 @@
+package SimpleGUI;
+
 import java.awt.*;
 import java.awt.event.*;
 
@@ -7,15 +9,15 @@ import java.awt.event.*;
  * presionar un boton
  * 
  * @author Salvador Gonzalez Arellano
- * @version 1.0
+ * @version 2.0
  */
 public class EjemploCompleto3 extends Frame implements ActionListener {
-    Label helloLabel;
-    Label userLabel;
-    TextField userText;
+    Label mensajeLabel;
+    Label usuarioLabel;
+    TextField usuarioText;
     Label passLabel;
     TextField passText;
-    Button helloButton;
+    Button loginButton;
 
     /**
      * Constructor de la clase
@@ -23,58 +25,68 @@ public class EjemploCompleto3 extends Frame implements ActionListener {
     public EjemploCompleto3() {
         super("Login");
         addWindowListener(new WindowAdapter() {
-            public void windowClosing(WindowEvent evt) {
+            public void windowClosing(WindowEvent evento) {
                 System.exit(0);
             }
         });
-        initialize();
+        inicializar();
     }
 
     /**
      * Inicializa los componentes gráficos de la ventana y agrega el
      * ActionListener al boton
      */
-    private void initialize() {
+    private void inicializar() {
         setSize(300, 200);
-        this.setLayout(null);
-        userLabel = new Label("Usuario:", Label.RIGHT);
-        userLabel.setBounds(10, 40, 80, 25);
-        add(userLabel);
-        userText = new TextField(50);
-        userText.setBounds(95, 38, 195, 24);
-        add(userText);
+        setLayout(null);
+
+        usuarioLabel = new Label("Usuario:", Label.RIGHT);
+        usuarioLabel.setBounds(10, 40, 80, 25);
+        add(usuarioLabel);
+
+        usuarioText = new TextField(50);
+        usuarioText.setBounds(95, 38, 195, 24);
+        usuarioText.addActionListener(this);
+        add(usuarioText);
+
         passLabel = new Label("Contraseña:", Label.RIGHT);
         passLabel.setBounds(10, 80, 80, 25);
         add(passLabel);
+
         passText = new TextField(50);
         passText.setBounds(95, 78, 195, 24);
         passText.setEchoChar('*');
+        passText.addActionListener(this);
         add(passText);
-        helloButton = new Button("Login");
-        helloButton.setBounds(110, 115, 80, 25);
+
+        loginButton = new Button("Login");
+        loginButton.setBounds(110, 115, 80, 25);
         // Registra la instancia de esta/this clase como listener
-        helloButton.addActionListener(this);
-        add(helloButton);
-        helloLabel = new Label("", Label.CENTER);
-        helloLabel.setBounds(10, 150, 280, 25);
-        add(helloLabel);
-        center();
+        loginButton.addActionListener(this);
+        add(loginButton);
+
+        mensajeLabel = new Label("", Label.CENTER);
+        mensajeLabel.setBounds(10, 150, 280, 25);
+        add(mensajeLabel);
+
+        centrar();
         setVisible(true);
     }
 
     /**
      * Centra la ventana con respecto a las dimesiones de la pantalla
      */
-    public void center() {
-        Dimension screenSize = Toolkit.getDefaultToolkit().getScreenSize();
-        Dimension frameSize = this.getSize();
+    public void centrar() {
+        Dimension tamPantalla = Toolkit.getDefaultToolkit().getScreenSize();
+        Dimension tamVentana = this.getSize();
         // Se ajusta el tamaño de la ventana, si es mayor al de la pantalla
-        if (frameSize.height > screenSize.height)
-            frameSize.height = screenSize.height;
-        if (frameSize.width > screenSize.width)
-            frameSize.width = screenSize.width;
+        if (tamVentana.height > tamPantalla.height)
+            tamVentana.height = tamPantalla.height;
+        if (tamVentana.width > tamPantalla.width)
+            tamVentana.width = tamPantalla.width;
         // Se centra la ventana
-        this.setLocation((screenSize.width - frameSize.width) / 2, (screenSize.height - frameSize.height) / 2);
+        this.setLocation((tamPantalla.width - tamVentana.width) / 2,
+                (tamPantalla.height - tamVentana.height) / 2);
     }
 
     /**
@@ -85,14 +97,14 @@ public class EjemploCompleto3 extends Frame implements ActionListener {
      */
     @Override
     public void actionPerformed(ActionEvent evento) {
-        String user = userText.getText();
+        String usuario = usuarioText.getText();
         String pass = passText.getText();
-        if (user.equals("admin") && pass.equals("admin")) {
-            helloLabel.setText("Login correcto, bienvenido " + user);
+        if (usuario.equals("admin") && pass.equals("admin")) {
+            mensajeLabel.setText("Login correcto, bienvenido " + usuario);
             this.setVisible(false);
             new EjemploCompleto1();
         } else {
-            helloLabel.setText("Login incorrecto verifique los datos");
+            mensajeLabel.setText("Login incorrecto verifique los datos");
         }
     }
 

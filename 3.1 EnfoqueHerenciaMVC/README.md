@@ -1,0 +1,1 @@
+Ejemplo de como se usaba el enfoque de herencia para el patrón de diseño MVC
