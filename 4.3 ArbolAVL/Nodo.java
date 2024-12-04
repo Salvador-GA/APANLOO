@@ -1,3 +1,5 @@
+package ArbolAVL;
+
 /**
  * Clase nodo para un arbol binario
  * 
@@ -11,7 +13,6 @@
 public class Nodo<T extends Comparable<T>> {
     private T dato; // Dato del nodo.
     private Nodo<T> izquierdo, derecho; // Referencia a los subarboles.
-    private int factorEq;
 
     /**
      * Constructor que inicializa el nodo con el dato y los subarboles a null
@@ -22,7 +23,6 @@ public class Nodo<T extends Comparable<T>> {
         this.dato = dato;
         izquierdo = null;
         derecho = null;
-        factorEq=0;
     }
 
     /**
@@ -77,24 +77,6 @@ public class Nodo<T extends Comparable<T>> {
      */
     public void setDerecho(Nodo<T> derecho) {
         this.derecho = derecho;
-    }
-
-    /**
-     * Devuelve el factor de equilibrio del nodo
-     * 
-     * @return Factor de equilibrio del nodo
-     */
-    public int getFactorEq() {
-        return factorEq;
-    }
-
-    /**
-     * Establece el factor de equilibrio del nodo
-     * 
-     * @param factorEq
-     */
-    public void setFactorEq(int factorEq) {
-        this.factorEq = factorEq;
     }
 
 }
