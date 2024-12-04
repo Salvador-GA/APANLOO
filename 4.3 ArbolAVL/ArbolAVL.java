@@ -529,7 +529,7 @@ public class ArbolAVL<T extends Comparable<T>> {
             actual.setIzquierdo(rotacionIzq(actual.getIzquierdo()));
             return rotacionDer(actual);
         } else if (factorEq > 1 && factorEquilibrio(actual.getDerecho()) >= 0) {
-            /* caso derecha-derecha */
+            /* Caso derecha-derecha */
             return rotacionIzq(actual);
         } else if (factorEq > 1 && factorEquilibrio(actual.getDerecho()) < 0) {
             /* Caso derecha-izquierda */
