@@ -12,7 +12,7 @@ import java.util.Queue;
  * @param <T>  El tipo del dato que contendrá cada Nodo.
  * @param raiz El nodo raiz del arbol.
  * @author Salvador Gonzalez Arellano
- * @version 1.0
+ * @version 1.1
  */
 public class ArbolAVL<T extends Comparable<T>> {
     private Nodo<T> raiz; // Raíz del árbol AVL.
@@ -557,7 +557,6 @@ public class ArbolAVL<T extends Comparable<T>> {
                 /* se rebalancea y actualiza la raiz */
                 raiz = rebalancear(actual);
             }
-            antecesor = encontrarAntecesor(actual.getDato());
             rebalanceHaciaArriba(antecesor);
         }
     }
