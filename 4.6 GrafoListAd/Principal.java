@@ -14,6 +14,7 @@ public class Principal {
         g.agregarArista(0, 1);
         g.agregarArista(0, 3);
         g.agregarArista(0, 5);
+        g.agregarArista(1, 1);
         g.agregarArista(1, 2);
         g.agregarArista(1, 3);
         g.agregarArista(2, 3);
@@ -31,6 +32,6 @@ public class Principal {
         System.out.print("Impresión del grafo:\n");
         g.mostrarGrafo();
         System.out.println("Grado del vertice 2: " + g.gradoVertice(2));
-        System.out.println("Vecinos del vertice 3: " + g.gradoVertice(3));
+        System.out.println("Vecinos del vertice 3: " + g.getVecinos(3));
     }
 }
