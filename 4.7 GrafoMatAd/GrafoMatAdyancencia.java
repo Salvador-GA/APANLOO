@@ -5,7 +5,7 @@ import java.util.ArrayList;
  * adyacencias, esta implementacion es para un grafo no dirigido sin pesos
  *
  * @author Salvador Gonzalez Arellano
- * @version 1.0
+ * @version 1.1
  */
 public class GrafoMatAdyancencia {
     private ArrayList<ArrayList<Integer>> matrizAdyacencia;
@@ -104,7 +104,7 @@ public class GrafoMatAdyancencia {
     public ArrayList<String> getAristas() {
         ArrayList<String> listaDeAristas = new ArrayList<>();
         for (int i = 0; i < numVertices; i++) {
-            for (int j = i + 1; j < numVertices; j++) {
+            for (int j = i; j < numVertices; j++) {
                 if (matrizAdyacencia.get(i).get(j) > 0) {
                     listaDeAristas.add("(" + i + ", " + j + ")");
                 }
