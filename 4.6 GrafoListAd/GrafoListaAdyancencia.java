@@ -6,7 +6,7 @@ import java.util.LinkedList;
  * adyacencias, esta implementacion es para un grafo no dirigido sin pesos
  *
  * @author Salvador Gonzalez Arellano
- * @version 1.0
+ * @version 1.1
  */
 public class GrafoListaAdyancencia {
     private ArrayList<LinkedList<Integer>> listaAdyacencia;
@@ -147,7 +147,10 @@ public class GrafoListaAdyancencia {
             System.out.println("Vértices no válidos");
         } else {
             // como es un grafo no dirigido se agrega la arista en ambos sentidos
-            listaAdyacencia.get(v).add(w);
+            // siempre y cuando no sea un bucle, en ese caso solo se agrega una vez
+            if (v!=w) {
+                listaAdyacencia.get(v).add(w);
+            }
             listaAdyacencia.get(w).add(v);
         }
     }
