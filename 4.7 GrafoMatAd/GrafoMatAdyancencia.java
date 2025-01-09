@@ -63,9 +63,9 @@ public class GrafoMatAdyancencia {
      */
     public int numAristas() {
         int numAristas = 0;
-        for (int i=0; i<numVertices; i++) {
-            for (int j=i; j<numVertices; j++) {
-                if (grafo.get(i).get(j) >0) {
+        for (int i = 0; i < numVertices; i++) {
+            for (int j = i; j < numVertices; j++) {
+                if (matrizAdyacencia.get(i).get(j) > 0) {
                     numAristas++;
                 }
             }
