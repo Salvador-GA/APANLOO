@@ -11,4 +11,4 @@ El curso cubre los siguientes temas:
 
 4 Patrones de almacenamiento no lineales.
 
-Los ejemplos están ordenados condorme al tema al que pertenecen. el número que aparece antes del . en cada ejemplo indica el tema al que pertenece y el número que aparece después del punto indica el número de ejemplo.
+Los ejemplos están ordenados conforme al tema al que pertenecen. el número que aparece antes del . en cada ejemplo indica el tema al que pertenece y el número que aparece después del punto indica el número de ejemplo.
