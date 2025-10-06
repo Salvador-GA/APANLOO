@@ -1,3 +1,5 @@
+package ClaseAbstracta;
+
 /**
  * Clase Circulo, deriva de la clase Figura e implementa sus metodos
  * abstractos
@@ -13,8 +15,9 @@ public class Circulo extends Figura {
      * 
      * @param radio del circulo
      */
-    public Circulo(double radio) {
+    public Circulo(double radio, String color) {
         this.radio = radio;
+        setColor(color);
     }
 
     /**

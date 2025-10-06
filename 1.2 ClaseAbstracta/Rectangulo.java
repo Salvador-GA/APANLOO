@@ -1,3 +1,5 @@
+package ClaseAbstracta;
+
 /**
  * Clase Rectangulo, deriva de la clase Figura e implementa sus metodos
  * abstractos
@@ -14,9 +16,10 @@ public class Rectangulo extends Figura {
      * @param base   del rectangulo
      * @param altura del rectangulo
      */
-    public Rectangulo(double base, double altura) {
+    public Rectangulo(double base, double altura, String color) {
         this.base = base;
         this.altura = altura;
+        setColor(color);
     }
 
     /**

@@ -1,3 +1,5 @@
+package ClaseAbstracta;
+
 /**
  * Clase Cuadrado, deriva de la clase Rectangulo sobreescribe los metodos
  * setBase, setAltura y toString
@@ -12,8 +14,8 @@ public class Cuadrado extends Rectangulo {
      * 
      * @param lado lado del cuadrado
      */
-    public Cuadrado(double lado) {
-        super(lado, lado);
+    public Cuadrado(double lado, String color) {
+        super(lado, lado, color);
     }
 
     /**
