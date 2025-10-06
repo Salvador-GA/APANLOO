@@ -14,6 +14,7 @@ public class Circulo extends Figura {
      * Constructor de la clase para inicializar el radio
      * 
      * @param radio del circulo
+     * @param color del circulo
      */
     public Circulo(double radio, String color) {
         this.radio = radio;

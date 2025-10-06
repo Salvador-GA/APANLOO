@@ -15,6 +15,7 @@ public class Rectangulo extends Figura {
      * 
      * @param base   del rectangulo
      * @param altura del rectangulo
+     * @param color  del rectangulo
      */
     public Rectangulo(double base, double altura, String color) {
         this.base = base;

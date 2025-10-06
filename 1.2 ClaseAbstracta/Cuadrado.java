@@ -13,6 +13,7 @@ public class Cuadrado extends Rectangulo {
      * Constructor de la clase para inicializar el lado
      * 
      * @param lado lado del cuadrado
+     * @param color del cuadrado
      */
     public Cuadrado(double lado, String color) {
         super(lado, lado, color);
