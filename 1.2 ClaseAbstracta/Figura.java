@@ -1,5 +1,3 @@
-package ClaseAbstracta;
-
 /**
  * Clase abstracta Figura, define los métodos que deben ser implementados por
  * las clases derivadas
