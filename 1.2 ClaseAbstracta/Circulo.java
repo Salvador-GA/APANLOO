@@ -1,5 +1,3 @@
-package ClaseAbstracta;
-
 /**
  * Clase Circulo, deriva de la clase Figura e implementa sus metodos
  * abstractos
