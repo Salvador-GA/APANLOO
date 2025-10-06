@@ -3,6 +3,9 @@
  * @brief Clase principal para ejecutar el ejemplo de clase genérica Caja.
  */
 
+import java.util.LinkedList;
+import java.util.List;
+
 public class Principal {
 
     public static void main(String[] args) {
@@ -34,6 +37,22 @@ public class Principal {
         // Mostrar el contenido de cada caja
         for (Caja<?> caja : cajas) {
             System.out.println(caja.toString());
+        }
+        
+        /**
+         * Crear una lista ligada de Caja<?> para almacenar diferentes tipos de objetos
+         * Caja<?> significa que el tipo dentro de la caja es desconocido en tiempo de
+         * compilación. Esto permite que el arreglo pueda almacenar instancias de Caja
+         * con diferentes tipos de contenido.
+         * También puede usar ArrayList.
+         */
+        List<Caja<?>> listaCajas = new LinkedList<>();
+        listaCajas.add(cajaCadena);
+        listaCajas.add(cajaEntero);
+        listaCajas.add(new Caja<>(3.1416));
+        System.out.println("\n--- Lista:");
+        for (Caja<?> c : listaCajas) {
+            System.out.println(c);
         }
     }
 }
