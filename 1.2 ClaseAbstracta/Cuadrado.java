@@ -1,5 +1,3 @@
-package ClaseAbstracta;
-
 /**
  * Clase Cuadrado, deriva de la clase Rectangulo sobreescribe los metodos
  * setBase, setAltura y toString
