@@ -1,1 +1,0 @@
-Ejemplo que aplica el sistema de eventos a la detección de 2 tipos diferentes de eventos sobre si un número es primo o no

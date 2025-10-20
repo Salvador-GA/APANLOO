@@ -1,10 +1,8 @@
-package EventosMultiples;
-
 /**
  * Clase EventSubscriber que implementa el listener y define acciones basadas en el tipo de evento.
  *
  * @author Salvador Gonzalez Arellano
- * @version 1.0
+ * @version 1.1
  */
 public class EventSubscriber implements EventListener {
     private final String name;
@@ -26,6 +24,7 @@ public class EventSubscriber implements EventListener {
 
     /**
      * Método que reacciona al evento en función del tipo de evento.
+     * Si recibe por error un tipo de evento que no le interesa, no hace nada.
      * 
      * @param event el tipo de evento recibido, 1 es número primo, 2 es número no primo.
      * @param message el mensaje del evento.
@@ -36,6 +35,6 @@ public class EventSubscriber implements EventListener {
             System.out.println(name + " recibió Evento Tipo 1 " + message);
         } else if (event == 2 && recibeEventoNoPrimo) {
             System.out.println(name + " recibió Evento Tipo 2 " + message);
-        }
+        } 
     }
 }
