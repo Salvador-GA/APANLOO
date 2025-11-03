@@ -1,0 +1,1 @@
+Ejemplo de una interfaz gráfica con JFrame, un contador que se incrementa apretando un botón y se reinicia apretando otro.

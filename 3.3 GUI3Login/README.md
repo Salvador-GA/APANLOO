@@ -1,0 +1,1 @@
+Ejemplo de una interfaz gráfica con JFrame, un ejemplo de una ventana de login, que al hacer correctamente el inicio de sesión, la ventana se cierra y abre otra para continuar con la aplicación.

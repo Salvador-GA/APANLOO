@@ -1,0 +1,1 @@
+Ejemplo de como se ve el enfoque de Herencia para el MVC

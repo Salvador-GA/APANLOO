@@ -1,0 +1,1 @@
+Ejemplo de una interfaz gráfica con JFrame, la ventana solicita los datos de nombre y apellido al usuario y al presionar el botón le da un saludo.
