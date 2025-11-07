@@ -1,7 +1,9 @@
+package ArbolBinario;
+
 import java.util.LinkedList;
 import java.util.Queue;
 
-/**
+/** 
  * Clase ArbolBinario, almacena los nodos de un arbol binario, de tal forma que
  * cuando se va a agregar un nodo se necesita indicar cual será el nodo
  * antecesor/padre y luego se intenta agregar primero en el enlace izquierdo, si
@@ -11,7 +13,7 @@ import java.util.Queue;
  * @param <T>  el tipo del dato que contendrá cada Nodo.
  * @param raiz el nodo raiz del arbol.
  * @author Salvador Gonzalez Arellano
- * @version 1.1
+ * @version 1.2
  */
 public class ArbolBinario<T> {
     private Nodo<T> raiz; // Raíz del árbol binario.
@@ -173,6 +175,64 @@ public class ArbolBinario<T> {
         return tam(actual);
     }
 
+    /**
+     * Devuelve la profundidad del nodo actual
+     * 
+     * @param actual nodo con el que se esta trabajando
+     * @param dato   dato que se busca
+     * @param profActual  nivel actual en la recursion
+     * @return la profundidad del nodo
+     */
+    private int profundidad(Nodo<T> actual, T dato, int profActual) {
+        if (actual == null) {
+            return -1; // No se encontró el dato
+        }
+        if (dato.equals(actual.getDato())) {
+            return profActual; // Se encontró el dato
+        }
+        // Buscar en el subárbol izquierdo
+        int profundidadIzq = profundidad(actual.getIzquierdo(), dato, profActual + 1);
+        if (profundidadIzq != -1) {
+            return profundidadIzq; // Se encontró en el subárbol izquierdo
+        } else {
+            // Buscar en el subárbol derecho
+            return profundidad(actual.getDerecho(), dato, profActual + 1);
+        }
+    }
+
+    /**
+     * Devuelve la profundidad del nodo que contiene a dato
+     * 
+     * @param dato del cual se quiere saber su profundidad
+     * @return La profundidad del nodo que contiene a dato. Si este nodo no existe,
+     *         devuelve -1.
+     */
+    public int profundidad(T dato) {
+        return profundidad(raiz, dato, 0);
+    }
+
+    public int alturaUsandoProfundidad(T dato) {
+        Nodo<T> actual = encontrarNodo(dato);
+        int profActual = profundidad(dato);
+        int maxProf = maxProfundidadEnSubarbol(actual);
+        return maxProf - profActual;
+    }
+
+    /**
+     * Recorre el subárbol de 'n' y retorna la profundidad absoluta MÁXIMA
+     * de cualquier nodo dentro de ese subárbol (por aristas).
+     * Base: subárbol vacío -> -1.
+     */
+    private int maxProfundidadEnSubarbol(Nodo<T> actual) {
+        if (actual == null) {
+            return -1;
+        }
+        int profN   = profundidad(actual.getDato());                // usa tu método existente
+        int profIzq = maxProfundidadEnSubarbol(actual.getIzquierdo());
+        int profDer = maxProfundidadEnSubarbol(actual.getDerecho());
+        return Math.max(profN, Math.max(profIzq, profDer));
+    }
+    
     /**
      * Devuelve la altura del nodo actual
      * 
